@@ -3,13 +3,13 @@ An open-source Progressive Web App, created for aim to use as 'Class Schedule". 
 ![nTask Cover](https://raw.githubusercontent.com/aomkirby123/nTask/master/screenshot/cover.min.jpg)
 Based on class schedule (as weekly task)
 
-### Introduction
+## Introduction
 Written in HTML5, CSS3, JavaScript ES6 with React.js, and Dexie.js (Consumed as node module). Written as Progressive Web App with full offline support.
 
-### Stucture
+## Stucture
 Structure for development
 
-##### Directory
+### Directory
 Direcotry access
 
 ```
@@ -30,7 +30,7 @@ Direcotry access
       | react-component (Where React extended class is located)
       | index.js (Main React file)
 ```
-##### React Access
+### React Access
 React access map
 
 ```
@@ -44,7 +44,7 @@ React access map
       | update-container (Where update screen is rendered) - Class: Page, Title
 ```
 
-##### IndexedDB
+### IndexedDB
 Acess map of Indexed database
 
 ```
@@ -64,8 +64,8 @@ Acess map of Indexed database
       | timeDiff: Display time diff
 ```
 
-##### Note
+## Note
 To beta tester: There's some microtransaction that doesn't supported in React version, yet!
 
-### Developer note
+## Developer note
 As I said to myself, this is not the cleanest code at all, I have just used to with React then integrated an existed project to React, and this is the result of the consequence.
