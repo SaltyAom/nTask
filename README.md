@@ -23,7 +23,7 @@ Other structure are same as *create-react-app*, I tried not to change that struc
 Structure for development
 
 ### Directory
-Direcotry access
+Directory access
 
 ```
 | nTask
