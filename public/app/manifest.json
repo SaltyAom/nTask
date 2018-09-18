@@ -1,0 +1,27 @@
+{
+    "short_name": "nTask",
+    "name": "nTask",
+    "icons": [
+      {
+        "src": "../img/nTask/nTask 192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "../img/nTask/nTask 256.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      },
+      {
+        "src": "../img/nTask/nTask 512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "../",
+    "background_color": "#f9fafe",
+    "display": "standalone",
+    "scope": "../",
+    "theme_color": "#f9fafe",
+    "orientation": "portrait"
+  }
