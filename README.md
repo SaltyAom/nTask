@@ -3,8 +3,21 @@ An open-source Progressive Web App, created for aim to use as 'Class Schedule". 
 ![nTask Cover](https://raw.githubusercontent.com/aomkirby123/nTask/master/screenshot/cover.min.jpg)
 Based on class schedule (as weekly task)
 
-## Introduction
+## Instruction
 Written in HTML5, CSS3, JavaScript ES6 with React.js, and Dexie.js (Consumed as node module). Written as Progressive Web App with full offline support.
+
+## Getting Started
+This project bootstraped by *create-react-app*, started by create-react-app in your command line
+`create-react-app ntask-react`
+
+nTask need an extra module which isn't presented in *create-react-app*, including:
+> Dexie
+`npm install dexie`
+
+> jQuery
+`npm install jquery`
+
+Other structure are same as *create-react-app*, I tried not to change that structure for easier to setup
 
 ## Stucture
 Structure for development
