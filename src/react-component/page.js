@@ -588,38 +588,44 @@ export class Title extends React.Component {
 }
 
 export class Alert extends React.Component {
-    componentDidUpdate(){
-        $("#add-alert").fadeIn(0);
-        $("#add-alert-error-box").fadeOut(0).toggle(300);
-        $("#add-alert-error-box").on("click", () => {
-            $("#add-alert-error-box").fadeIn(0).toggle(300);
-            $("#add-alert").delay(300).fadeOut(0);
-        });  
-        let autoDismiss = setInterval(() => {
-            $("#add-alert-error-box").fadeIn(0).toggle(300);
-            $("#add-alert").delay(300).fadeOut(0);
-            clearInterval(autoDismiss);
-        }, 300);
+    componentWillUpdate(){
+        if(this.props.alertType === "fail"){
+            $("#add-alert").fadeIn(0);
+            $("#add-alert-error-box").fadeOut(0).toggle(300);
+            $("#add-alert-error-box").unbind().on("click", () => {
+                $("#add-alert-error-box").fadeIn(0).toggle(300);
+                $("#add-alert").delay(300).fadeOut(0);
+            });  
+            let autoDismiss = setInterval(() => {
+                $("#add-alert-error-box").fadeIn(0).toggle(300);
+                $("#add-alert").delay(300).fadeOut(0);
+                clearInterval(autoDismiss);
+            }, 3000);
+        }
     }
 
     render(){
+        /*
         if(this.props.alertType === "success"){
             return(null)
         } else if(this.props.alertType === "fail"){
-            return(
-                <div id="add-alert">
-                    <div id="add-alert-wrapper">
-                        <center>
-                            <div id="add-alert-error-box">
-                                <div id="add-alert-content-error">Add Fail</div>
-                            </div>
-                        </center>
-                    </div>
+        */
+        return(
+            <div id="add-alert" style={{display:"none"}}>
+                <div id="add-alert-wrapper">
+                    <center>
+                        <div id="add-alert-error-box" style={{display:"none"}}>
+                            <div id="add-alert-content-error">Add Fail</div>
+                        </div>
+                    </center>
                 </div>
-            )
+            </div>
+        )
+        /*
         } else {
             return(null)
         }
+        */
     }
 }
 
