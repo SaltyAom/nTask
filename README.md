@@ -12,7 +12,7 @@ Structure for development
 ##### Directory
 Direcotry access
 
-...
+```
 | nTask
 |
 |--| Public (Where index.html file can access)
@@ -29,12 +29,11 @@ Direcotry access
       | img (Where React can access, some icons, and banner)
       | react-component (Where React extended class is located)
       | index.js (Main React file)
-...
-
+```
 ##### React Access
 React access map
 
-...
+```
 | index.js
 |
 |--| react-component
@@ -43,12 +42,12 @@ React access map
       | page.js (Where page is rendered) - Class: Page, Title
       | tabs-bar.js (Where tab bar is rendered) - Class: Tabs
       | update-container (Where update screen is rendered) - Class: Page, Title
-...
+```
 
 ##### IndexedDB
 Acess map of Indexed database
 
-...
+```
 | dbnames (Generated DB of Dexie.js)
 | mist (Where data is stored)
    | Task (Indexed: day, staticStart)
@@ -63,7 +62,7 @@ Acess map of Indexed database
       |   | endHour
       |   | endMinute
       | timeDiff: Display time diff
-...
+```
 
 ##### Note
 To beta tester: There's some microtransaction that doesn't supported in React version, yet!
