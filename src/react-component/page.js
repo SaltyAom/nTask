@@ -25,7 +25,8 @@ export class Page extends React.Component {
             dayText: todayText,
             fullDayText: fullDayText,
             date: date,
-            alertType: ""
+            alertType: "",
+            subject: ""
         }
 
         this.addTask = this.addTask.bind(this);
@@ -112,6 +113,13 @@ export class Page extends React.Component {
         if(progressPercent === Infinity){ progressPercent = 100; }
 
         $("#landing-progression").css({"width":`${progressPercent}%`});
+
+        let newSubject = ($(".task-done").last().children(".task-box").children(".schedule-header").html() !== "") ? $(".task-done").last().children(".task-box").children(".schedule-header").html() : "<span style='color:transparent !important'>a</span>";
+        if(this.state.subject !== newSubject){
+            this.setState({
+                subject: newSubject
+            })
+        }
         console.log("Did Update");
     }
 
@@ -351,7 +359,7 @@ export class Page extends React.Component {
         this.setState({
             task: data[0],
             taskState: classArr,
-            taskDone: taskDone
+            taskDone: taskDone,
         })
 
         console.log("Handle Select");
@@ -380,7 +388,9 @@ export class Page extends React.Component {
                                     </div>
                                     <div id="landing-task-head-right">
                                         <div id="current-task" className="header-small">
-                                            Hello World
+                                            <span className="transparent">a</span>
+                                            {this.state.subject}
+                                            <span className="transparent">a</span>
                                         </div>
                                         <div className="content-large">
                                         Task {this.state.taskDone} / {this.state.taskCount}
@@ -558,7 +568,7 @@ export class Page extends React.Component {
                                 <div className="setting-icon">
                                     <i className="fas fa-wrench"></i>
                                 </div>
-                                <div className="setting-content">Force Update</div>
+                                <div className="setting-content" onClick={this.props.requestUpdate}>Force Update</div>
                             </div>
                         </div>
                     </div>

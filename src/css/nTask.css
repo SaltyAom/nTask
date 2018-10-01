@@ -90,6 +90,7 @@ div.app-page {
     -webkit-overflow-scrolling: touch;
     overflow:auto; }
 .hidden {display:none !important;}
+.transparent {color:transparent !important; opacity:0;}
 
 /* Body CSS */
 

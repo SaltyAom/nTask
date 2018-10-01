@@ -89,6 +89,12 @@ class App extends React.Component {
         })
     }
 
+    requestUpdate(){
+        this.setState({
+            updating:"true"
+        })
+    }
+
     render(){
         return(
             <div id="app">
@@ -108,6 +114,7 @@ class App extends React.Component {
                     handleUpdate={this.handleUpdate}
                     version={this.state.version} 
                     addSwitch={this.addSwitch.bind(this)}
+                    requestUpdate={this.requestUpdate.bind(this)}
                 />
             </div>
         )
